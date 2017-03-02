@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+a = User.create(name: "Ale", email: "ale@ale.cl")
 
 5.times do |f|
 	g = Genre.create(name: "Genre #{f}")
 	s = Song.create(name: "Song #{f}", duration: 100*f, genre_id: g.id)
-	u = UserSong.create(position: f, user_id: 1, song_id: s.id)
+	u = UserSong.create(position: f, user_id: a.id, song_id: s.id)
 end
